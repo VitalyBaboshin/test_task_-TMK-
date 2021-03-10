@@ -35,7 +35,6 @@ export class SelectCountryComponent implements OnInit, OnDestroy{
         return of(country)
       }),
       switchMap((data) => {
-        console.log('sdsd',data)
        return combineLatest([this.data.get(), this.data.getCities(data)])
       })
     )
