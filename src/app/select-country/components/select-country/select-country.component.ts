@@ -1,10 +1,9 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {ActivatedRoute, Params, Router} from "@angular/router";
-import {Observable, of, Subscription} from "rxjs";
-import {switchMap, tap} from "rxjs/operators";
+import {of, Subscription, combineLatest} from "rxjs";
+import {switchMap} from "rxjs/operators";
 
 import {DataService} from "src/app/shared/services/data.service";
-import {log} from "util";
 
 @Component({
   selector: 'vl-select-country',
@@ -18,7 +17,6 @@ export class SelectCountryComponent implements OnInit, OnDestroy{
   cities: string[] | null
 
   error: string | null
-
   subscriptions: Subscription[]=[];
 
   constructor(private data: DataService,
@@ -27,40 +25,43 @@ export class SelectCountryComponent implements OnInit, OnDestroy{
 
   ngOnInit(): void {
 
-    // Получаем список стран для селекта
-    this.subscriptions.push(this.data.get().subscribe((data) => {
-      this.countries = Object.keys(data.countries)
-
-
-      const routerUrl = this.router.url.replace(/_/g, ' ').substr(1)
-      if (!this.countries.includes(routerUrl)) {
-        this.error = 'country not found'
-        this.defaultValueSelect = ''
-      } else {
-        this.error = null
-        this.defaultValueSelect = routerUrl
-      }
-    }))
-
-    // Получаем список городов
     this.subscriptions.push(this.route.paramMap
-      .pipe(switchMap((params: Params) => {
-      setTimeout(() => {this.isLoading = true; })
-      let country = params.get("country")
-      if (country !== null) {
-        country = country.replace(/_/g, ' ')
-      }
-      return this.data.getCities(country).pipe(tap((data) => {
-          setTimeout(() => {this.isLoading = false})
-      }
+      .pipe(
+      switchMap((params: Params) => {
+        let country: string | null = params.get("country")
+        if (country !== null) {
+          country = country.replace(/_/g, ' ')
+        }
+        return of(country)
+      }),
+      switchMap((data) => {
+        console.log('sdsd',data)
+       return combineLatest([this.data.get(), this.data.getCities(data)])
+      })
+    )
+        .subscribe((data) => {
+          //Получаем список стран
+          this.countries = Object.keys(data[0].countries)
 
-      ) )
-    })).subscribe(data => {
-      if (data === undefined) {
-        data = []
-      }
-      this.cities = data
-    } ))
+          const routerUrl = this.router.url.replace(/_/g, ' ').substr(1)
+          //Устанавливаем для Selector выбранное значениепо умолчанию
+          // Если в списке стран не найдена страна то дефол значение сбрасываем
+          if (!this.countries.includes(routerUrl) && routerUrl !=='') {
+            this.error = 'country not found'
+            this.defaultValueSelect = ''
+          } else {
+            this.error = null
+            this.defaultValueSelect = routerUrl
+          }
+
+          // Получаем список городов
+          if (data[1] === undefined) {
+            this.cities = []
+          } else {
+            this.cities = data[1]
+          }
+        })
+    )
   }
 
   navigateTo($event: any) {

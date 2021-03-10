@@ -1,6 +1,5 @@
 <div class="select__wrapper">
   <div class="container">
-    <p *ngIf="error" class="center">{{error}}</p>
     <div *ngIf="countries">
       <select
         class="select margin-auto" *ngIf="countries.length !== 0; else empty"
@@ -23,12 +22,12 @@
   </div>
 </div>
 
-
+<p *ngIf="error" class="center">{{error}}</p>
 <p *ngIf="isLoading" class="center">Loading ...</p>
 
 <div *ngIf="cities as cit">
   <div class="container">
-    <p class="center" *ngIf="cit.length !== null && cit.length === 0; else citiesFound">No cities found</p>
+    <p class="center" *ngIf="cit.length !== null && cit.length === 0 && defaultValueSelect !==''; else citiesFound">No cities found</p>
 
     <ng-template #citiesFound>
       <div class="card-position">
