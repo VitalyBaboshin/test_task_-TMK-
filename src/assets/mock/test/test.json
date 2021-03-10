@@ -1,0 +1,182 @@
+{
+  "countries": {
+    "test-empty": [],
+    "China": [
+      "Guangzhou",
+      "Fuzhou",
+      "Beijing",
+      "Baotou",
+      "Hohhot",
+      "Guiyang",
+      "Yinchuan",
+      "Nanjing"
+    ],
+    "Japan": [
+      "Tokyo",
+      "Hiroshima",
+      "Saitama",
+      "Nihon'odori",
+      "Ibaraki",
+      "Urayasu"
+    ],
+    "Thailand": [
+      "Bangkok",
+      "Chumphon",
+      "Kathu",
+      "Phang Khon"
+    ],
+    "United States": [
+      "Mukilteo",
+      "Fairfield",
+      "Chicago",
+      "Hernando",
+      "Irving",
+      "Baltimore",
+      "Kingston"
+    ],
+    "India": [
+      "Bhandup",
+      "Mumbai",
+      "Visakhapatnam",
+      "Coimbatore",
+      "Delhi",
+      "Bangalore"
+    ],
+    "Malaysia": [
+      "Pantai",
+      "Kuala Lumpur",
+      "Petaling Jaya",
+      "Shah Alam",
+      "Kajang",
+      "Kuching",
+      "Setapak"
+    ],
+    "Republic of Korea": [
+      "Seoul",
+      "Incheon",
+      "Paju",
+      "Cheonan",
+      "Yongin",
+      "Kwanghui-dong",
+      "Pon-dong",
+      "Gwangju"
+    ],
+    "Hong Kong": [
+      "Shuen Wan",
+      "Central District",
+      "Hung Hom",
+      "Kowloon"
+    ],
+    "Taiwan": [
+      "Taipei",
+      "Taoyuan",
+      "Tuchang",
+      "Hsinchu",
+      "Nankan"
+    ],
+    "Philippines": [
+      "Manila",
+      "Ayala",
+      "Bayan",
+      "Roosevelt",
+      "Blumentritt",
+      "Cardona",
+      "Pasong Tamo",
+      "Valenzuela"
+    ],
+    "Australia": [
+      "East Gosford",
+      "City of Parramatta",
+      "Pyrmont",
+      "Boambee",
+      "Paramatta"
+    ],
+    "Vietnam": [
+      "Hanoi",
+      "Ho Chi Minh City",
+      "Can Tho",
+      "Thanh Nguyen",
+      "Dinh Long",
+      "Vinh",
+      "Nghi Loc",
+      "Phu Xuyen"
+    ],
+    "Russia": [
+      "Moscow",
+      "Volgograd",
+      "Rostov-on-Don",
+      "Stavropol'skiy Rayon",
+      "Smolensk",
+      "Kursk",
+      "Astrakhan",
+      "Ulyanovsk",
+      "Kaluga",
+      "Kaliningrad",
+      "Tolyatti",
+      "Sterlitamak",
+      "Kemerovo",
+      "Chelyabinsk",
+      "Krasnodar",
+      "Severodvinsk",
+      "Samara",
+      "Beloretsk",
+      "Voronezh",
+      "Ufa",
+      "Samara",
+      "Cherepovets",
+      "Tyumen",
+      "Saint Petersburg"
+    ],
+    "France": [
+      "Pont-Saint-Martin",
+      "Luce",
+      "Montaigu",
+      "La Chapelle-de-Brain",
+      "Saint-Mars-du-Desert",
+      "Challans",
+      "Le Mans",
+      "Saint-Laurent-de-la-Plaine",
+      "Baule"
+    ],
+    "Germany": [
+      "Langgons",
+      "Holle",
+      "Tespe",
+      "Walsrode",
+      "Salzgitter",
+      "Bad Sassendorf",
+      "Vienenburg"
+    ],
+    "Spain": [
+      "Valencia",
+      "Riola",
+      "Barcelona",
+      "MontornÃ¨s del VallÃ¨s",
+      "Begues",
+      "Terrassa"
+    ],
+    "Austria": [
+      "Vienna",
+      "Kapfenberg",
+      "Kirchham",
+      "Hohenzell",
+      "Gmunden",
+      "Molln",
+      "Judendorf",
+      "Ebersdorf",
+      "Hinterstoder"
+    ],
+    "United Kingdom": [
+      "Pershore",
+      "Rowley Regis",
+      "Stroud",
+      "Birmingham",
+      "Worcester",
+      "Smethwick",
+      "Alcester",
+      "Dudley",
+      "Gloucester"
+    ]
+  }
+
+}

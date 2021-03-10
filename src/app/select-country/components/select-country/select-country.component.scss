@@ -1,0 +1,25 @@
+.select__wrapper {
+  background-color: #c4c4c4;
+  padding: 10px 0;
+}
+
+.select {
+  min-width: 250px;
+  padding: 5px;
+}
+.margin-auto {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-position {
+  margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-gap: 20px;
+}
+
+.center {
+  text-align: center;
+}

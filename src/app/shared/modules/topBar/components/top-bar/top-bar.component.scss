@@ -1,0 +1,47 @@
+.navbar {
+  min-height: 60px;
+  background-color: #217094;
+}
+
+.brand-logo {
+  font-weight: 400;
+  font-size: 20px;
+  //margin-left: 20px;
+  color: #fff;
+}
+
+.navbar__inner {
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+ul {
+  display: flex;
+}
+
+li {
+  padding: 0 15px;
+  list-style-type: none;
+}
+
+a{
+  color: #fff;
+  text-decoration: none;
+  align-self: center;
+}
+
+@media (max-width: 768px) {
+  li {
+    padding: 0 5px;
+  }
+  a{
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 500px) {
+  ul {
+    display: none;
+  }
+}
